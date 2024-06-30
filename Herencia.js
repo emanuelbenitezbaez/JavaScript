@@ -41,5 +41,6 @@ person1._name = `Carlos`;//set name
 console.log(person1._name);//get name
 
 //CREAMOS OBJETOS DE LA CLASE HIJA EMPLEADO.
-let empleado1 = new Empleado(`Empleado1`);
+let empleado1 = new Empleado(`Emanuel`,`Benitez Baez`,`Sistemas`);
+console.log(empleado1);
 console.log(empleado1._name);
