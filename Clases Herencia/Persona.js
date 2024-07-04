@@ -14,7 +14,7 @@ class Persona {
     }
     //GETTERS Y SETTERS
     get idPersona() {
-        return contadorPersonas++;
+        return this._idPersona;
     }
     get nombre() {
         return this._nombre;
@@ -34,9 +34,7 @@ class Persona {
     set edad(edad) {
         this._edad = edad;
     }
-    get idPersona() {
-        return this._idPersona;
-    }
+  
     //METODO toString() DE LA CLASE PERSONA.
     toString() {
         return `${this._idPersona} ${this._nombre} ${this._apellido} ${this._edad}`;
