@@ -48,3 +48,25 @@ console.log(raton1.toString());
 
 let raton2= new Raton(`USB`, `Genius`);
 console.log(raton2.toString());
+
+//CLASE TECLADO
+class Teclado extends DispositivoEntrada {
+    static contadorTeclados = 0;
+
+    constructor(tipoEntrada, marca) {
+        super(tipoEntrada, marca);
+        this._idTeclado = ++Teclado.contadorTeclados;
+    }
+    get idTeclado() {
+        return this._idTeclado;
+    }
+    toString() {
+        return `Teclado: [Id teclado:${this._idTeclado}, Tipo entrada: ${this._tipoEntrada}, Marca: ${this._marca}]`
+    }
+
+}
+let teclado1 = new Teclado(`USB`, `Noga`);
+console.log(teclado1.toString());
+
+let teclado2 = new Teclado(`USB`, `Genius`);
+console.log(teclado2.toString());
