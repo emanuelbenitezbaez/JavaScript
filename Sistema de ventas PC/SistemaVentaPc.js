@@ -70,3 +70,66 @@ console.log(teclado1.toString());
 
 let teclado2 = new Teclado(`USB`, `Genius`);
 console.log(teclado2.toString());
+
+
+
+//CLASS MONITOR
+class Monitor {
+    static contadorMonitores = 0;
+    constructor(marca, tamanio) {
+        this._idMonitor = ++Monitor.contadorMonitores;
+        this._marca = marca;
+        this._tamanio = tamanio;
+
+    }
+    get idMonitor() {
+        return this._idMonitor;
+    }
+    get marca() {
+        return this._marca;
+    }
+    set marca(marca) {
+        this._marca = marca;
+    }
+    get tamanio() {
+        return this._tamanio;
+    }
+    set tamanio(tamanio) {
+        this._tamanio = tamanio;
+    }
+    toString() {
+        return  `Monitor: [Id Monitor:${this._idMonitor}, Marca:${this._marca}, Tamaño: ${this._tamanio}]`
+    }
+
+}
+let monitor1 = new Monitor(`Samsung`, 27);
+console.log(monitor1.toString());
+
+let monitor2 = new Monitor(`LG`, 27);
+console.log(monitor2.toString());
+
+//CLASE COMPUTADORA:
+class Computadora {
+    static contadorComputadoras = 0;
+    constructor(nombre,monitor,raton,teclado) {
+        this._idComputadora = ++Computadora.contadorComputadoras;
+        this._nombre = nombre;
+        this._monitor = monitor;
+        this._raton = raton;
+        this._teclado = teclado;
+    }
+    get idComputadoras(){
+        return this._idComputadora;
+    }
+    toString() {
+        return  `COMPUTADORA ${this._idComputadora}:\n[Nombre:${this._nombre} \n${this._monitor} \n ${this._raton} \n ${this._teclado} \n]`
+    }
+
+}
+
+let compu1 = new Computadora(`Ryzen`,monitor1,raton1,teclado1);
+console.log(compu1.toString());
+
+let compu2 = new Computadora(`Intel`,monitor2,raton2,teclado2);
+console.log(compu2.toString());
+
