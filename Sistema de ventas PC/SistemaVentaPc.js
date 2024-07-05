@@ -133,3 +133,49 @@ console.log(compu1.toString());
 let compu2 = new Computadora(`Intel`,monitor2,raton2,teclado2);
 console.log(compu2.toString());
 
+
+//CLASS ORDEN
+
+class Orden {
+    static contadorOrdenes = 0;
+
+    constructor() {
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._computadoras = [];
+    }
+    get idOrden() {
+        return this._idOrden;
+    }
+    get computadora() {
+        return this._computadora;
+    }
+    set computadora(computadora) {
+        this._computadora = computadora;
+    }
+    toString() {
+        return `ORDEN ${this._idOrden}:\n[ \n]`
+    }
+    agregarComputadora(computadora) {
+
+        this._computadoras.push(computadora);
+
+    }
+    mostrarOrden() {
+        let ordenComputadoras = "";
+        for (let computadora of this._computadoras) {
+            ordenComputadoras = ordenComputadoras + computadora;
+        }
+        console.log(`Orden: ${this._idOrden} Computadoras: ${ordenComputadoras}`)
+    }
+
+
+}
+let orden1 = new Orden();
+orden1.agregarComputadora(compu1);
+orden1.agregarComputadora(compu2);
+orden1.mostrarOrden();
+
+let orden2 = new Orden();
+orden2.agregarComputadora(compu2);
+
+orden2.mostrarOrden();
