@@ -44,7 +44,7 @@ console.log(gerente1.obtenerDetalle());
 let gerente2 = new Gerente(`Carla`, 800, `Sistemas`);
 console.log(gerente2.obtenerDetalle());
 
-//EL OBJETO EMPLEADO UNICAMENTE IMPRIME DATOS DEL OBJETO EMPLEADO.
+//EL OBJETO EMPLEADO UNICAMENTE IMPRIME DATOS DEL OBJETO EMPLEADO. solo accede a la clase padre atravez del metodo super.
 let empleado1 = new Empleado(`Austin`, 1200);
 console.log(empleado1.obtenerDetalle());
 
