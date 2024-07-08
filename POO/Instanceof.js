@@ -52,9 +52,11 @@ function imprimirTipo(tipo) {//PODEMOS PASARLE UN TIPO DE LA CLASE PADRE O HIJA 
    if(tipo instanceof Empleado){
     console.log(`Es un objeto de tipo Empleado`);
    }
-
+   else if(tipo instanceof Object){
+    console.log(`Es un objeto de tipo Object`);
+   }
 }
-
+//SIEMPRE COMENZAR EL INSTANCEOF CON EL OBJETO DE MENOR JERARQUIA.
 
 
 let gerente1 = new Gerente(`Carlos`, 800, `Finanzas`);
