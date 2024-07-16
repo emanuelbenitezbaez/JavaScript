@@ -11,9 +11,9 @@ const funcionPromesa = () => {
             console.log(randomNumber);
 
             if (randomNumber > 0.5) {
-                resolve(`True:${randomNumber}`);
+                resolve({status: 200});
             } else {
-                reject(`False:${randomNumber}`);
+                reject({status: 404});
             }
         },5000);
     });
@@ -21,8 +21,12 @@ const funcionPromesa = () => {
 
 funcionPromesa().then((result) => {
     console.log("La promesa se resolvió:", result);
+    
+    console.log("La promesa fue rechazada:", result.status);
 }).catch((error) => {
     console.log("La promesa fue rechazada:", error);
+    
+    console.log("La promesa fue rechazada:", error.status);
 });
 
 console.log("Sigue ejecutando el programa");
