@@ -1,7 +1,7 @@
-//AXIOS: solicitud HTTP tipo PATCH utilizando la librería Axios en JavaScript
+//AXIOS: solicitud HTTP tipo DELETE utilizando la librería Axios en JavaScript
 //Creamos la funcion patch
 function del() {
-    //Utilizo Axios para hacer una solicitud PATCH a la URL https://jsonplaceholder.typicode.com/users/1.
+    //Utilizo Axios para hacer una solicitud DELETE a la URL https://jsonplaceholder.typicode.com/users/1.
     axios.delete('https://jsonplaceholder.typicode.com/users/1'
     ).then((response) => {
         console.log(response);
