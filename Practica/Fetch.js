@@ -36,4 +36,14 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     console.error(error);
   });
 
-  
+  /**
+   * Explicación:
+
+En este ejemplo, se consulta la API https://jsonplaceholder.typicode.com/posts/1 que devuelve un objeto JSON con información sobre un post.
+La función fetch devuelve una promesa que se resuelve con un objeto Response.
+Se verifica si la solicitud fue exitosa usando la propiedad ok del objeto Response.
+Si la solicitud fue exitosa, se usa el método json() para convertir el cuerpo de la respuesta a formato JSON.
+El método json() también devuelve una promesa que se resuelve con los datos JSON.
+Una vez que se obtienen los datos JSON, se muestran en la consola usando console.log().
+Se utiliza un bloque catch para manejar cualquier error que pueda ocurrir durante la solicitud.
+   */
