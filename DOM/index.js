@@ -51,3 +51,19 @@ console.log(tituloElement.innerHTML);
 
 subtituloElement.innerHTML = "Nuevo Subtítulo";
 console.log(subtituloElement.innerHTML);
+
+
+//selecciona todos los elementos de un documento HTML que coincidan con un nombre de etiqueta específico.
+
+// Seleccionamos todos los elementos <p> del documento y los almacenamos en la variable 'parrafos'
+const parrafos = document.getElementsByTagName('p');
+
+// Imprimimos en la consola la cantidad total de párrafos encontrados
+console.log(`Cantidad de Elementos: ${parrafos.length}`);
+
+// Recorremos cada párrafo utilizando un bucle for
+for (let i = 0; i < parrafos.length; i++) {
+    // Imprimimos el índice del párrafo y su contenido HTML
+    console.log(`Indice : ${i} - ${parrafos[i].innerHTML}`);
+}
+     
