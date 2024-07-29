@@ -82,9 +82,40 @@ const elementosDestacados = document.getElementsByClassName("destacado");
 // Recorremos cada elemento usando un for
 for (let i = 0; i < elementosDestacados.length; i++) {
     // Imprimimos el índice del elemento y su contenido HTML
-    console.log(`Elemento destacado : ${i} - ${elementosDestacados[i].innerHTML}`); 
+    console.log(`Elemento destacado : ${i} - ${elementosDestacados[i].innerHTML}`);
 }
 //Tambien podemos usar for of :
 for (let elemento of elementosDestacados) {
     console.log(elemento.innerHTML);
 }
+
+/**
+ * querySelectorAll(): Seleccionando múltiples elementos con CSS.
+
+¿Qué hace querySelectorAll()?
+
+En JavaScript, el método querySelectorAll() es una herramienta para seleccionar múltiples
+ elementos de un documento HTML utilizando selectores CSS.
+A diferencia de getElementsByClassName(), que solo busca por clases, querySelectorAll()
+te permite realizar búsquedas mucho más precisas y flexibles.
+ */
+
+ // Seleccionamos todos los elementos con la clase "item"
+ const items = document.querySelectorAll(".item");
+
+
+ console.log("Elementos clase item:");
+ //Recorremos los elementos de la clase item guardados en items e imprimimos.
+ items.forEach(item => {
+    
+     console.log(item.innerHTML);
+ });
+
+ // Seleccionamos los elementos "item" que también tienen la clase "relevante"
+ const itemsDestacados = document.querySelectorAll(".item.relevante");
+
+ console.log("Elementos clase item que tambien tienen la clase relevante:");
+ //Recorremos los elementos de la clase item  guardados en itemsDestacados e imprimimos.
+ itemsDestacados.forEach(item => {
+     console.log(item.innerHTML);
+ });
