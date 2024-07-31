@@ -26,3 +26,35 @@ console.log(divs);
 
 const inputs = document.getElementsByName(`telefono`);
 console.log(inputs);
+
+//OTROS METODOS querySelector()
+//Este metodo devuelve el primer elemento del selector css que ingrese(solo retorna al primer elemento).
+//Este metodo es el mas versatil porque podemos buscar cualquier elemento.
+//Puedo buscar por clase,id o atributo
+
+const otherWrapper = document.querySelector('.title');
+console.log(otherWrapper);
+
+
+const subtitle = document.querySelector('#subtitle');
+console.log(subtitle);
+
+const atributeWrapper = document.querySelector('[class="wrapper"]');
+console.log(atributeWrapper);
+
+
+const linkbold = wrapper.querySelector('.link.bold');
+console.log(linkbold);
+
+//Puedo utilizar pseudoclases
+const linkbolds = wrapper.querySelector('.link:last-of-type');
+console.log(linkbolds);
+
+//querySelectorAll
+//Este metodo devuelve todos los elemento del selector css que ingrese(devuelve en forma de nodeList).
+
+const allLinks = document.querySelectorAll('.link');
+console.log(allLinks);
+//Se utiliza en cualquier nodo, tanto en document como en otro.
+const allLink = wrapper.querySelectorAll('.link');
+console.log(allLink);
