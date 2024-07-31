@@ -58,3 +58,26 @@ console.log(allLinks);
 //Se utiliza en cualquier nodo, tanto en document como en otro.
 const allLink = wrapper.querySelectorAll('.link');
 console.log(allLink);
+
+//NODE LIST - HTML COLLECTIONS
+//La lista de nodos puede contener cualquier elemento:
+//elementos,text,comentarios,atributos,document etc.
+//LA LISTA DE NODOS NO SE ACTUALIZA SI EL DOM CAMBIA, EN CAMBIO EL HTML COLLECTIOS SI CAMBIA.
+
+const HTMLLinks = document.getElementsByClassName('link');
+console.log(HTMLLinks);
+
+const NODELinks = wrapper.querySelectorAll('.link');
+console.log(NODELinks);
+
+//LA LISTA DE NODOS PUEDE UTILIZAR FOREACH PARA RECCORRER  LOS ELEMENTOS DENTRO DE ESTA LISTA.
+//LA LISTA DE NODOS NO SE ACTUALIZA SI EL DOM CAMBIA
+const nodeList = wrapper.querySelectorAll('.link');
+console.log(nodeList);
+
+nodeList.forEach(link => console.log(link));
+
+//LA LISTA HTML COLLECTIONS TIENE UN METODO LLAMADO ITEM() DONDE PUEDO OBBTENER A LOS ELEMENTOS DENTRO DE ESTA LISTA POR SU POSICION.
+const collectionsList = document.getElementsByClassName('link');
+console.log(collectionsList.item(1));
+
