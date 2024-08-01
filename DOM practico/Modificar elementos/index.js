@@ -35,4 +35,11 @@ imagen.setAttribute("alt","imagen-spiderman");
 imagen.setAttribute("class","img");
 imagen.setAttribute("id","img-spiderman");
 
+//HAS ATTRIBUTE : DEVUELVE TRUE SI ESTE NODO ELEMENTO TIENE UN ATRIBUTO EN ESPECIFICO.
+
+console.log(imagen.hasAttribute("alt"));
+
+//REMOVE ATTRIBUTE : BORRA EL ATRIBUTO ESPECIFICADO.
+
+imagen.removeAttribute("alt");
 
