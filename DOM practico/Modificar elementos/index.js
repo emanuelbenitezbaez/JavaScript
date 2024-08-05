@@ -43,3 +43,14 @@ console.log(imagen.hasAttribute("alt"));
 
 imagen.removeAttribute("alt");
 
+//ATRIBUTOS PERSONALIZADOS
+
+let image = document.querySelector('[data-identificador=img] ');
+let figcaption = document.querySelector('figcaption');
+image.src = "https://images7.alphacoders.com/943/943484.jpg"
+
+const textoMostrar = image.getAttribute('data-texto-mostrar');
+figcaption.textContent = textoMostrar;
+
+
+
