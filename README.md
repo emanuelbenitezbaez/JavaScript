@@ -20,7 +20,7 @@ Instalación
 
 Clona el repositorio:
 
-git clone https://github.com/tu-usuario/aprendiendo-javascript.git
+git clone https://github.com/Emanuel-Baez/JavaScript.git
 
 cd aprendiendo-javascript
 
